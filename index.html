@@ -3,206 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fatima Ijaz</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Fatima Ijaz | Game Developer · Designer · Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f0f4f8;--ink:#0f1c2e;--blue:#2563eb;--blue-light:#60a5fa;--grey:#64748b;--card-bg:#fff;--border:#cbd5e1}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden}
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;padding:60px 24px;background:var(--ink);overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 30%,rgba(37,99,235,.22) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 80% 70%,rgba(96,165,250,.12) 0%,transparent 60%)}
-.hero-ornament{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-.hero-ornament svg{position:absolute;opacity:.07}
-.hero-ornament svg:first-child{top:-60px;right:-60px;width:380px}
-.hero-ornament svg:last-child{bottom:-60px;left:-60px;width:280px;transform:rotate(180deg)}
-.hero>*:not(.hero-ornament){position:relative}
-.hero-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--blue-light);margin-bottom:20px;animation:fadeUp .8s ease both}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,6rem);color:#f0f4f8;line-height:1.08;animation:fadeUp .8s .15s ease both}
-.hero h1 em{font-style:italic;color:var(--blue-light)}
-.hero-sub{margin-top:18px;font-size:15px;color:#7f9ab5;font-weight:300;letter-spacing:.5px;animation:fadeUp .8s .3s ease both}
-.hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);margin:28px auto;animation:fadeUp .8s .4s ease both}
-.hero-contact-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;animation:fadeUp .8s .5s ease both}
-.hero-contact-row a{display:flex;align-items:center;gap:7px;font-size:13px;color:#7f9ab5;text-decoration:none;padding:8px 16px;border:1px solid rgba(37,99,235,.35);border-radius:30px;transition:all .25s}
-.hero-contact-row a:hover{color:var(--blue-light);border-color:var(--blue-light);background:rgba(37,99,235,.1)}
-.scroll-hint{position:absolute!important;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px}
-.scroll-hint span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#3a5068}
-.scroll-dot{width:1px;height:40px;background:linear-gradient(to bottom,var(--blue),transparent);animation:pulse 1.5s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
-.page-wrap{max-width:940px;margin:0 auto;padding:60px 24px 80px}
-.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:28px}
-.sec-num{font-family:'Playfair Display',serif;font-size:11px;color:var(--blue);letter-spacing:2px}
-.sec-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;white-space:nowrap}
-.sec-line{flex:1;height:1px;background:var(--border)}
-section{margin-bottom:60px}
-.summary-card{background:var(--ink);border-radius:16px;padding:40px;position:relative;overflow:hidden}
-.summary-card::before{content:'\201C';position:absolute;top:-20px;left:24px;font-family:'Playfair Display',serif;font-size:140px;color:rgba(37,99,235,.18);line-height:1}
-.summary-card p{font-size:16px;line-height:1.8;color:#94afc8;position:relative}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
-.skill-cat,.proj-card,.edu-item,.misc-card,.exp-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;transition:transform .2s,box-shadow .2s}
-.skill-cat{padding:22px}
-.skill-cat:hover,.proj-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(37,99,235,.1)}
-.skill-cat-title{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.skill-cat-title::after{content:'';flex:1;height:1px;background:var(--border)}
-.tags,.pill-list,.proj-tech{display:flex;flex-wrap:wrap;gap:7px}
-.tag,.pill{font-size:12px;padding:4px 11px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:20px}
-.exp-stack{display:flex;flex-direction:column;gap:16px}
-.exp-card{border-radius:16px;padding:30px;display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:start}
-.exp-card:hover,.edu-item:hover{box-shadow:0 8px 28px rgba(37,99,235,.09)}
-.exp-role{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700}
-.exp-company{color:var(--blue);font-size:13px;font-weight:500;margin-top:2px}
-.exp-date{font-size:12px;letter-spacing:1px;color:var(--grey);text-align:right;margin-top:4px}
-.exp-desc{grid-column:1/-1;font-size:14px;color:var(--grey);margin-top:10px;border-top:1px solid var(--border);padding-top:14px}
-.exp-desc ul{padding-left:18px}
-.exp-desc li{margin-bottom:4px}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
-.proj-card{padding:26px;position:relative;overflow:hidden}
-.proj-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--blue),var(--blue-light))}
-.proj-icon{font-size:20px;margin-bottom:12px;color:var(--blue)}
-.proj-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:8px}
-.proj-desc{font-size:13px;color:var(--grey);line-height:1.6}
-.proj-tech{margin-top:14px;gap:5px}
-.proj-tech span{font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;background:#eff6ff;border-radius:4px;color:var(--blue);border:1px solid #bfdbfe}
-.edu-list{display:flex;flex-direction:column;gap:14px}
-.edu-item{padding:22px 28px;display:flex;align-items:center;gap:18px}
-.edu-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--blue),var(--blue-light));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
-.edu-degree{font-weight:500;font-size:15px}
-.edu-inst{font-size:13px;color:var(--grey);margin-top:2px}
-.misc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.misc-card{padding:24px}
-.misc-card-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
-.misc-card-title i{color:var(--blue);font-size:14px}
-.pill{padding:5px 14px}
-footer{background:var(--ink);color:#3a5068;text-align:center;padding:28px 20px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
-footer span{color:var(--blue-light)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:none}
-@media(max-width:560px){.exp-card{grid-template-columns:1fr}.exp-date{text-align:left}.sec-title{white-space:normal}}
+:root{--bg:#0a0615;--card:rgba(255,255,255,.045);--line:rgba(255,255,255,.1);--ink:#ece8ff;--mute:#9a93bd;--v:#8b5cf6;--c:#22d3ee;--p:#f472b6;--l:#a3e635;--o:#fb923c}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(139,92,246,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(139,92,246,.06) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0}
+.px{font-family:'Press Start 2P',monospace;letter-spacing:1px}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 22px;position:relative;overflow:hidden}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.85;animation:float 9s ease-in-out infinite}
+.o1{width:150px;height:150px;top:10%;left:8%;background:radial-gradient(circle at 30% 30%,#fda4af,var(--p) 60%,#9d174d)}
+.o2{width:90px;height:90px;top:18%;right:12%;background:radial-gradient(circle at 30% 30%,#a5f3fc,var(--c) 60%,#0e7490);animation-delay:-3s}
+.o3{width:200px;height:200px;bottom:8%;right:6%;background:radial-gradient(circle at 30% 30%,#ddd6fe,var(--v) 60%,#4c1d95);animation-delay:-5s}
+.o4{width:64px;height:64px;bottom:20%;left:14%;background:radial-gradient(circle at 30% 30%,#d9f99d,var(--l) 60%,#3f6212);animation-delay:-1.5s}
+.o5{width:40px;height:40px;top:55%;left:4%;background:radial-gradient(circle at 30% 30%,#fed7aa,var(--o) 60%,#9a3412);animation-delay:-7s}
+@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-26px) scale(1.06)}}
+.hero>*:not(.orb){position:relative;z-index:1}
+.tag-top{font-size:10px;color:var(--c);margin-bottom:26px;text-shadow:0 0 12px var(--c);animation:up .8s ease both}
+.hero h1{font-size:clamp(3rem,10vw,7rem);font-weight:700;line-height:1.05;background:linear-gradient(110deg,var(--c),var(--v) 45%,var(--p));-webkit-background-clip:text;background-clip:text;color:transparent;animation:up .8s .15s ease both;filter:drop-shadow(0 0 28px rgba(139,92,246,.45))}
+.role{margin-top:22px;font-size:clamp(1rem,2.6vw,1.5rem);color:var(--ink);min-height:2em;animation:up .8s .3s ease both}
+.role b{color:var(--l);font-weight:500}
+.role::after{content:'▌';color:var(--c);animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.stats{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:32px;animation:up .8s .4s ease both}
+.stat{padding:12px 20px;border:1px solid var(--line);border-radius:14px;background:var(--card);backdrop-filter:blur(8px)}
+.stat strong{display:block;font-size:1.5rem;color:var(--c)}
+.stat span{font-size:12px;color:var(--mute)}
+.links{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:32px;animation:up .8s .5s ease both}
+.links a{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--ink);text-decoration:none;padding:10px 20px;border-radius:30px;border:1px solid var(--v);transition:.25s}
+.links a:hover{background:var(--v);box-shadow:0 0 24px rgba(139,92,246,.7);transform:translateY(-3px)}
+.links a:first-child{background:linear-gradient(110deg,var(--v),var(--p));border-color:transparent}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.wrap{max-width:980px;margin:0 auto;padding:40px 22px 80px;position:relative;z-index:1}
+section{margin-bottom:76px}
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.sec-num{font-size:9px;color:var(--p);text-shadow:0 0 10px var(--p);white-space:nowrap}
+.sec-title{font-size:1.8rem;font-weight:700}
+.sec-line{flex:1;height:2px;background:linear-gradient(90deg,var(--v),transparent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(8px);transition:transform .25s,box-shadow .25s,border-color .25s}
+.summary{padding:34px;font-size:16.5px;color:#cfc9ee;border-left:4px solid var(--c)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:16px}
+.skill{padding:22px;border-top:3px solid var(--k)}
+.skill:hover,.proj:hover{transform:translateY(-6px);border-color:var(--k);box-shadow:0 14px 40px -10px var(--k)}
+.skill h3{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--k);margin-bottom:14px;display:flex;gap:9px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font-size:12px;padding:4px 11px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid var(--line);transition:.2s}
+.skill:hover .chips span{border-color:var(--k)}
+.tl{position:relative;padding-left:30px;display:flex;flex-direction:column;gap:18px}
+.tl::before{content:'';position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--c),var(--v),var(--p))}
+.job{padding:26px;position:relative}
+.job::before{content:'';position:absolute;left:-30px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--k,var(--c));box-shadow:0 0 14px var(--k,var(--c))}
+.job:hover{border-color:var(--k,var(--c));box-shadow:0 10px 36px -12px var(--k,var(--c))}
+.job-top{display:flex;justify-content:space-between;gap:10px 20px;flex-wrap:wrap}
+.role-t{font-size:1.2rem;font-weight:700}
+.co{color:var(--k,var(--c));font-size:14px;font-weight:500}
+.date{font-size:12px;color:var(--mute);border:1px solid var(--line);padding:3px 12px;border-radius:20px;height:fit-content;white-space:nowrap}
+.job ul,.job p{margin-top:12px;font-size:14px;color:var(--mute);border-top:1px solid var(--line);padding-top:12px}
+.job ul{padding-left:20px}
+.job li{margin-bottom:3px}
+.proj{padding:26px;position:relative;overflow:hidden}
+.ico{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:19px;color:#fff;margin-bottom:14px;background:var(--k);box-shadow:0 0 20px -2px var(--k)}
+.proj h3{font-size:1.1rem;margin-bottom:8px}
+.proj p{font-size:13px;color:var(--mute);line-height:1.6}
+.tech{margin-top:14px;display:flex;flex-wrap:wrap;gap:5px}
+.tech span{font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:5px;color:var(--k);border:1px solid var(--k)}
+.feat{grid-column:1/-1;display:flex;gap:22px;align-items:center;background:linear-gradient(120deg,rgba(139,92,246,.2),rgba(244,114,182,.12))}
+.feat .ico{width:64px;height:64px;font-size:28px;flex-shrink:0}
+.badge{font-size:8px;color:var(--l);margin-bottom:8px;display:block}
+.edu{padding:22px 26px;display:flex;gap:18px;align-items:center;margin-bottom:14px}
+.edu .ico{margin:0;flex-shrink:0}
+.edu small{color:var(--mute);font-size:13px}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills span{font-size:12px;padding:5px 14px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.05)}
+.misc{padding:24px}
+.misc h3{font-size:1rem;margin-bottom:14px;display:flex;gap:9px;align-items:center}
+.misc h3 i{color:var(--k)}
+footer{text-align:center;padding:34px 20px;font-size:9px;color:var(--mute);border-top:1px solid var(--line);position:relative;z-index:1}
+footer span{color:var(--c)}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s,transform .6s}
+.reveal.on{opacity:1;transform:none}
+@media(max-width:600px){.feat{flex-direction:column;align-items:flex-start}.sec-title{font-size:1.4rem}.orb{opacity:.45}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 
 <header class="hero">
-  <div class="hero-ornament">
-    <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="90" stroke="#2563eb"/><circle cx="100" cy="100" r="70" stroke="#2563eb" stroke-width=".5"/><line x1="10" y1="100" x2="190" y2="100" stroke="#2563eb" stroke-width=".5"/><line x1="100" y1="10" x2="100" y2="190" stroke="#2563eb" stroke-width=".5"/></svg>
-    <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="90" stroke="#2563eb"/><rect x="30" y="30" width="140" height="140" stroke="#2563eb" stroke-width=".5"/></svg>
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="orb o4"></div><div class="orb o5"></div>
+  <p class="tag-top px">&gt; PLAYER ONE · PORTFOLIO 2026</p>
+  <h1>Fatima Ijaz</h1>
+  <p class="role">I'm a <b id="typed"></b></p>
+  <div class="stats">
+    <div class="stat"><strong>2</strong><span>Internships</span></div>
+    <div class="stat"><strong>3</strong><span>Semesters as Director of Graphics</span></div>
+    <div class="stat"><strong>6+</strong><span>Projects built</span></div>
   </div>
-  <p class="hero-tag">Portfolio · 2026</p>
-  <h1>Fatima <em>Ijaz</em></h1>
-  <div class="hero-divider"></div>
-  <p class="hero-sub">Software Engineering Student &nbsp;·&nbsp; Graphic Designer &nbsp;·&nbsp; Software Developer &nbsp;·&nbsp; Data Analyst</p>
-  <div class="hero-contact-row">
+  <div class="links">
     <a href="mailto:fomoij28@gmail.com"><i class="fas fa-envelope"></i> Email</a>
     <a href="https://www.linkedin.com/in/fatima-ijaz-73b6a8369"><i class="fab fa-linkedin"></i> LinkedIn</a>
     <a href="#"><i class="fab fa-github"></i> GitHub</a>
     <a href="#"><i class="fas fa-map-marker-alt"></i> Okara, Pakistan</a>
   </div>
-  <div class="scroll-hint"><span>Scroll</span><div class="scroll-dot"></div></div>
 </header>
 
-<main class="page-wrap">
+<main class="wrap">
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">Summary</h2><div class="sec-line"></div></div>
-    <div class="summary-card"><p>Creative and motivated Software Engineering undergraduate with hands-on experience in graphic design, Unity game development, and software development. Completed a Software Engineer internship at Finz Games, building a Unity 6 mobile game. Skilled in visual content, social media creatives and branding using Canva, with experience in full-stack development (PERN stack), data analysis, Flutter, and software testing. Director of Graphics for three semesters at the COMSATS Health Awareness &amp; Blood Donor Society.</p></div>
+    <div class="sec-head"><span class="sec-num px">LVL 01</span><h2 class="sec-title">About Me</h2><div class="sec-line"></div></div>
+    <div class="card summary">Creative and motivated Software Engineering undergraduate with hands-on experience in graphic design, Unity game development, and software development. Completed a Software Engineer internship at Finz Games, building a Unity 6 mobile game. Skilled in visual content, social media creatives and branding using Canva, with experience in full-stack development (PERN stack), data analysis, Flutter, and software testing. Director of Graphics for three semesters at the COMSATS Health Awareness &amp; Blood Donor Society.</div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Technical Skills</h2><div class="sec-line"></div></div>
-    <div class="skills-grid">
-      <div class="skill-cat"><div class="skill-cat-title">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span><span class="tag">C#</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">HTML/CSS</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Game Development</div><div class="tags"><span class="tag">Unity 6</span><span class="tag">Input System</span><span class="tag">Game UI</span><span class="tag">Haptics</span><span class="tag">Android Builds</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Web &amp; Mobile</div><div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Flutter</span><span class="tag">REST APIs</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Databases</div><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Oracle</span><span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">Firebase</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Testing</div><div class="tags"><span class="tag">Selenium</span><span class="tag">JUnit</span><span class="tag">TestNG</span><span class="tag">Jira</span><span class="tag">TestRail</span><span class="tag">Postman</span><span class="tag">Regression</span><span class="tag">Black-Box</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">AI &amp; Data</div><div class="tags"><span class="tag">Data Analysis</span><span class="tag">Visualization</span><span class="tag">AI Fundamentals</span><span class="tag">NLP</span><span class="tag">Info Security</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Design &amp; Tools</div><div class="tags"><span class="tag">Canva</span><span class="tag">Figma</span><span class="tag">Git/GitHub</span><span class="tag">VS Code</span><span class="tag">IntelliJ</span><span class="tag">XAMPP</span><span class="tag">Linux</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">SE Concepts</div><div class="tags"><span class="tag">OOP</span><span class="tag">DSA</span><span class="tag">Architecture</span><span class="tag">Design Patterns</span><span class="tag">UML</span><span class="tag">SRS</span><span class="tag">SDLC</span></div></div>
+    <div class="sec-head"><span class="sec-num px">LVL 02</span><h2 class="sec-title">Skill Tree</h2><div class="sec-line"></div></div>
+    <div class="grid">
+      <div class="card skill" style="--k:#a3e635"><h3><i class="fas fa-gamepad"></i> Game Development</h3><div class="chips"><span>Unity 6</span><span>C#</span><span>Input System</span><span>Game UI</span><span>Haptics</span><span>Android Builds</span></div></div>
+      <div class="card skill" style="--k:#f472b6"><h3><i class="fas fa-palette"></i> Design</h3><div class="chips"><span>Canva</span><span>Figma</span><span>Branding</span><span>Typography</span><span>Social Media Creatives</span></div></div>
+      <div class="card skill" style="--k:#22d3ee"><h3><i class="fas fa-code"></i> Languages</h3><div class="chips"><span>Python</span><span>Java</span><span>C++</span><span>C</span><span>C#</span><span>JavaScript</span><span>PHP</span><span>HTML/CSS</span></div></div>
+      <div class="card skill" style="--k:#8b5cf6"><h3><i class="fas fa-mobile-screen"></i> Web &amp; Mobile</h3><div class="chips"><span>React</span><span>Node.js</span><span>Express.js</span><span>Flutter</span><span>REST APIs</span></div></div>
+      <div class="card skill" style="--k:#fb923c"><h3><i class="fas fa-database"></i> Databases</h3><div class="chips"><span>PostgreSQL</span><span>MySQL</span><span>Oracle</span><span>SQL</span><span>MongoDB</span><span>Firebase</span></div></div>
+      <div class="card skill" style="--k:#22d3ee"><h3><i class="fas fa-chart-line"></i> AI &amp; Data</h3><div class="chips"><span>Data Analysis</span><span>Visualization</span><span>AI Fundamentals</span><span>NLP</span><span>Info Security</span></div></div>
+      <div class="card skill" style="--k:#f472b6"><h3><i class="fas fa-bug"></i> Testing</h3><div class="chips"><span>Selenium</span><span>JUnit</span><span>TestNG</span><span>Jira</span><span>TestRail</span><span>Postman</span><span>Regression</span><span>Black-Box</span></div></div>
+      <div class="card skill" style="--k:#a3e635"><h3><i class="fas fa-screwdriver-wrench"></i> Tools &amp; Concepts</h3><div class="chips"><span>Git/GitHub</span><span>VS Code</span><span>IntelliJ</span><span>Linux</span><span>OOP</span><span>DSA</span><span>UML</span><span>SDLC</span></div></div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Experience</h2><div class="sec-line"></div></div>
-    <div class="exp-stack">
-      <div class="exp-card">
-        <div><div class="exp-role">Software Engineer Intern · Games Development Track</div><div class="exp-company">Finz Games Pvt Ltd, Lahore</div></div>
-        <div class="exp-date">30 Jun – 12 Aug 2026</div>
-        <div class="exp-desc"><ul>
-          <li>Developed <em>Fruit Merge</em>, a Unity 6 mobile puzzle game, covering core merge gameplay, UI, and mobile input handling.</li>
-          <li>Fixed gameplay bugs including merge race conditions, disappearing fruits, and a game-over trigger that never fired.</li>
-          <li>Built pause and game-over screens, a combo popup, a profile editor, and a power-up row.</li>
-          <li>Implemented haptic feedback with the Unity Input System and Voodoo Utils; troubleshot Android builds.</li>
-        </ul></div>
+    <div class="sec-head"><span class="sec-num px">LVL 03</span><h2 class="sec-title">Experience</h2><div class="sec-line"></div></div>
+    <div class="tl">
+      <div class="card job" style="--k:#a3e635">
+        <div class="job-top"><div><div class="role-t">Software Engineer Intern · Games Development Track</div><div class="co">Finz Games Pvt Ltd, Lahore</div></div><div class="date">30 Jun – 12 Aug 2026</div></div>
+        <ul><li>Developed <em>Fruit Merge</em>, a Unity 6 mobile puzzle game, covering core merge gameplay, UI, and mobile input handling.</li><li>Fixed gameplay bugs including merge race conditions, disappearing fruits, and a game-over trigger that never fired.</li><li>Built pause and game-over screens, a combo popup, a profile editor, and a power-up row.</li><li>Implemented haptic feedback with the Unity Input System and Voodoo Utils; troubleshot Android builds.</li></ul>
       </div>
-      <div class="exp-card">
-        <div><div class="exp-role">Data Science Intern</div><div class="exp-company">Arch Technology</div></div>
-        <div class="exp-date">Jul – Aug 2025</div>
-        <div class="exp-desc"><ul>
-          <li>Performed data cleaning, exploratory analysis, and visualization using Python (pandas, matplotlib) and SQL on real-world business datasets.</li>
-          <li>Assisted in data modeling and BI reporting across end-to-end data science workflows.</li>
-        </ul></div>
+      <div class="card job" style="--k:#22d3ee">
+        <div class="job-top"><div><div class="role-t">Data Science Intern</div><div class="co">Arch Technology</div></div><div class="date">Jul – Aug 2025</div></div>
+        <ul><li>Performed data cleaning, exploratory analysis, and visualization using Python (pandas, matplotlib) and SQL on real-world business datasets.</li><li>Assisted in data modeling and BI reporting across end-to-end data science workflows.</li></ul>
+      </div>
+      <div class="card job" style="--k:#f472b6">
+        <div class="job-top"><div><div class="role-t">Director of Graphics</div><div class="co">COMSATS Health Awareness &amp; Blood Donor Society</div></div><div class="date">3 Semesters</div></div>
+        <ul><li>Led the graphics team and directed visual branding for campaigns, events, and social media.</li><li>Designed posters, social media creatives, and event materials in Canva.</li></ul>
+      </div>
+      <div class="card job" style="--k:#8b5cf6">
+        <div class="job-top"><div><div class="role-t">Head of Graphics · Sports Week SP-26</div><div class="co">CUI Sahiwal</div></div><div class="date">2026</div></div>
+        <p>Led graphic design for Sports Week and received a Certificate of Appreciation from the Student Affairs office. Also a Graphic Design Team Member in the COMSATS CSS Society.</p>
       </div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Leadership &amp; Design</h2><div class="sec-line"></div></div>
-    <div class="exp-stack">
-      <div class="exp-card">
-        <div><div class="exp-role">Director of Graphics</div><div class="exp-company">COMSATS Health Awareness &amp; Blood Donor Society</div></div>
-        <div class="exp-date">3 Semesters</div>
-        <div class="exp-desc"><ul><li>Led the graphics team and directed visual branding for campaigns, events, and social media.</li><li>Designed posters, social media creatives, and event materials in Canva.</li></ul></div>
-      </div>
-      <div class="exp-card">
-        <div><div class="exp-role">Head of Graphics · Sports Week SP-26</div><div class="exp-company">CUI Sahiwal</div></div>
-        <div class="exp-date">2026</div>
-        <div class="exp-desc">Led graphic design for Sports Week and received a Certificate of Appreciation from the Student Affairs office.</div>
-      </div>
-      <div class="exp-card">
-        <div><div class="exp-role">Graphic Design Team Member</div><div class="exp-company">COMSATS CSS Society</div></div>
-        <div class="exp-date"></div>
-        <div class="exp-desc">Contributed graphic design and creative content for society events.</div>
-      </div>
+    <div class="sec-head"><span class="sec-num px">LVL 04</span><h2 class="sec-title">Projects</h2><div class="sec-line"></div></div>
+    <div class="grid">
+      <div class="card proj feat" style="--k:#a3e635"><div class="ico"><i class="fas fa-gamepad"></i></div><div><span class="badge px">FEATURED</span><h3>Fruit Merge</h3><p>Unity 6 mobile puzzle game built during my Finz Games internship, with merge gameplay, combo popups, power-ups, and haptics.</p><div class="tech"><span>Unity</span><span>C#</span><span>Android</span></div></div></div>
+      <div class="card proj" style="--k:#22d3ee"><div class="ico"><i class="fas fa-camera"></i></div><h3>Tasveer Marketplace</h3><p>Full-stack photography marketplace with normalized DB schemas and a responsive React UI. Tested manually, with defects tracked in Jira and APIs validated in Postman.</p><div class="tech"><span>PostgreSQL</span><span>Express</span><span>React</span><span>Node</span></div></div>
+      <div class="card proj" style="--k:#8b5cf6"><div class="ico"><i class="fas fa-newspaper"></i></div><h3>Fake News Detection</h3><p>NLP-based fake news verification web app, with regression test cases to evaluate model accuracy across varied datasets.</p><div class="tech"><span>Python</span><span>NLP</span><span>ML</span></div></div>
+      <div class="card proj" style="--k:#f472b6"><div class="ico"><i class="fas fa-tint"></i></div><h3>Blood Donation &amp; Glow Up</h3><p>Two Flutter apps: a real-time donor-recipient connectivity app and a lifestyle app, with Firebase integration and structured navigation.</p><div class="tech"><span>Flutter</span><span>Firebase</span></div></div>
+      <div class="card proj" style="--k:#fb923c"><div class="ico"><i class="fas fa-shield-halved"></i></div><h3>Attack Handling System</h3><p>Intrusion detection with automated device blocking; documented threat scenarios and black-box tested the detection logic.</p><div class="tech"><span>Security</span><span>Testing</span></div></div>
+      <div class="card proj" style="--k:#22d3ee"><div class="ico"><i class="fas fa-boxes-stacked"></i></div><h3>Banking, Blood Bank &amp; Inventory</h3><p>Coursework systems: led SRS and design as Team Lead (Blood Bank), Java systems unit-tested with JUnit, and a C++ inventory app.</p><div class="tech"><span>Java</span><span>C++</span><span>JUnit</span></div></div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Projects</h2><div class="sec-line"></div></div>
-    <div class="projects-grid">
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-gamepad"></i></div><div class="proj-name">Fruit Merge</div><p class="proj-desc">Unity 6 mobile puzzle game built during my Finz Games internship, with merge gameplay, combo popups, power-ups, and haptics.</p><div class="proj-tech"><span>Unity</span><span>C#</span><span>Android</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-camera"></i></div><div class="proj-name">Tasveer Marketplace</div><p class="proj-desc">Full-stack photography marketplace with normalized DB schemas and a responsive React UI. Tested manually, with defects tracked in Jira and APIs validated in Postman.</p><div class="proj-tech"><span>PostgreSQL</span><span>Express</span><span>React</span><span>Node</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-newspaper"></i></div><div class="proj-name">Fake News Detection</div><p class="proj-desc">NLP-based fake news verification web app, with regression test cases to evaluate model accuracy across varied datasets.</p><div class="proj-tech"><span>Python</span><span>NLP</span><span>ML</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-tint"></i></div><div class="proj-name">Blood Donation &amp; Glow Up</div><p class="proj-desc">Two Flutter apps: a real-time donor-recipient connectivity app and a lifestyle app, with Firebase integration and structured navigation.</p><div class="proj-tech"><span>Flutter</span><span>Firebase</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-shield-alt"></i></div><div class="proj-name">Attack Handling System</div><p class="proj-desc">Intrusion detection with automated device blocking; documented threat scenarios and black-box tested the detection logic.</p><div class="proj-tech"><span>Security</span><span>Testing</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-boxes"></i></div><div class="proj-name">Banking, Blood Bank &amp; Inventory Systems</div><p class="proj-desc">Coursework systems: led SRS and design as Team Lead (Blood Bank), Java systems unit-tested with JUnit, and a C++ inventory app.</p><div class="proj-tech"><span>Java</span><span>C++</span><span>JUnit</span></div></div>
-    </div>
+    <div class="sec-head"><span class="sec-num px">LVL 05</span><h2 class="sec-title">Education</h2><div class="sec-line"></div></div>
+    <div class="card edu" style="--k:#8b5cf6"><div class="ico"><i class="fas fa-graduation-cap"></i></div><div><b>Bachelor of Software Engineering</b><br><small>COMSATS University Islamabad, Sahiwal Campus · 2023 – Present</small></div></div>
+    <div class="card edu" style="--k:#22d3ee"><div class="ico"><i class="fas fa-school"></i></div><div><b>FSc Pre-Engineering</b><br><small>Punjab Group of Colleges, Okara · 2021 – 2023</small></div></div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Education</h2><div class="sec-line"></div></div>
-    <div class="edu-list">
-      <div class="edu-item"><div class="edu-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="edu-degree">Bachelor of Software Engineering</div><div class="edu-inst">COMSATS University Islamabad, Sahiwal Campus &nbsp;·&nbsp; 2023 – Present</div></div></div>
-      <div class="edu-item"><div class="edu-icon"><i class="fas fa-school"></i></div><div><div class="edu-degree">FSc Pre-Engineering</div><div class="edu-inst">Punjab Group of Colleges, Okara &nbsp;·&nbsp; 2021 – 2023</div></div></div>
-    </div>
-  </section>
-
-  <section class="reveal">
-    <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">More About Me</h2><div class="sec-line"></div></div>
-    <div class="misc-row">
-      <div class="misc-card"><div class="misc-card-title"><i class="fas fa-star"></i> Soft Skills</div><div class="pill-list"><span class="pill">Problem Solving</span><span class="pill">Debugging</span><span class="pill">Teamwork</span><span class="pill">Communication</span><span class="pill">Leadership</span></div></div>
-      <div class="misc-card"><div class="misc-card-title"><i class="fas fa-language"></i> Languages</div><div class="pill-list"><span class="pill">Urdu (Native)</span><span class="pill">English (Proficient)</span><span class="pill">Punjabi (Fluent)</span><span class="pill">Hindi (Conversational)</span></div></div>
-      <div class="misc-card"><div class="misc-card-title"><i class="fas fa-heart"></i> Interests</div><div class="pill-list"><span class="pill">Calligraphy</span><span class="pill">Photography</span><span class="pill">Reading</span><span class="pill">Volunteering</span></div></div>
+    <div class="sec-head"><span class="sec-num px">LVL 06</span><h2 class="sec-title">More About Me</h2><div class="sec-line"></div></div>
+    <div class="grid">
+      <div class="card misc" style="--k:#a3e635"><h3><i class="fas fa-star"></i> Soft Skills</h3><div class="pills"><span>Problem Solving</span><span>Debugging</span><span>Teamwork</span><span>Communication</span><span>Leadership</span></div></div>
+      <div class="card misc" style="--k:#22d3ee"><h3><i class="fas fa-language"></i> Languages</h3><div class="pills"><span>Urdu (Native)</span><span>English (Proficient)</span><span>Punjabi (Fluent)</span><span>Hindi (Conversational)</span></div></div>
+      <div class="card misc" style="--k:#f472b6"><h3><i class="fas fa-heart"></i> Interests</h3><div class="pills"><span>Calligraphy</span><span>Photography</span><span>Reading</span><span>Volunteering</span></div></div>
     </div>
   </section>
 
 </main>
 
-<footer><p>Crafted with care by <span>Fatima Ijaz</span> &nbsp;·&nbsp; © 2026</p></footer>
+<footer class="px">GAME ON · <span>FATIMA IJAZ</span> · © 2026</footer>
 
 <script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.1});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+const roles=['Game Developer','Graphic Designer','Software Engineer','Data Analyst'],el=document.getElementById('typed');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=roles.join(' · ')}
+else{let i=0,j=0,del=false;(function tick(){const w=roles[i];el.textContent=w.slice(0,j);
+if(!del&&j===w.length){del=true;return setTimeout(tick,1400)}
+if(del&&j===0){del=false;i=(i+1)%roles.length}
+j+=del?-1:1;setTimeout(tick,del?40:85)})()}
 </script>
 </body>
 </html>
