@@ -3,146 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fatima Ejaz</title>
+<title>Fatima Ijaz</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #f0f4f8;
-    --ink: #0f1c2e;
-    --blue: #2563eb;
-    --blue-light: #60a5fa;
-    --blue-muted: #93c5fd;
-    --grey: #64748b;
-    --card-bg: #ffffff;
-    --border: #cbd5e1;
-  }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 60px 24px;
-    background: var(--ink);
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 80% 60% at 20% 30%, rgba(37,99,235,0.22) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 80% at 80% 70%, rgba(96,165,250,0.12) 0%, transparent 60%);
-  }
-
-  .hero-ornament { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; overflow: hidden; }
-  .hero-ornament svg { position: absolute; opacity: 0.07; }
-  .hero-ornament svg:first-child { top: -60px; right: -60px; width: 380px; }
-  .hero-ornament svg:last-child  { bottom: -60px; left: -60px; width: 280px; transform: rotate(180deg); }
-
-  .hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--blue-light); margin-bottom: 20px; animation: fadeUp 0.8s ease both; }
-
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6rem); color: #f0f4f8; line-height: 1.08; animation: fadeUp 0.8s 0.15s ease both; }
-  .hero h1 em { font-style: italic; color: var(--blue-light); }
-
-  .hero-sub { margin-top: 18px; font-size: 15px; color: #7f9ab5; font-weight: 300; letter-spacing: 0.5px; animation: fadeUp 0.8s 0.3s ease both; }
-
-  .hero-divider { width: 60px; height: 2px; background: linear-gradient(90deg, transparent, var(--blue), transparent); margin: 28px auto; animation: fadeUp 0.8s 0.4s ease both; }
-
-  .hero-contact-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 28px; animation: fadeUp 0.8s 0.5s ease both; }
-  .hero-contact-row a { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #7f9ab5; text-decoration: none; padding: 8px 16px; border: 1px solid rgba(37,99,235,0.35); border-radius: 30px; transition: all 0.25s; }
-  .hero-contact-row a:hover { color: var(--blue-light); border-color: var(--blue-light); background: rgba(37,99,235,0.1); }
-
-  .scroll-hint { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; animation: fadeUp 0.8s 0.8s ease both; }
-  .scroll-hint span { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #3a5068; }
-  .scroll-dot { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--blue), transparent); animation: scrollPulse 1.5s ease-in-out infinite; }
-  @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
-
-  .page-wrap { max-width: 940px; margin: 0 auto; padding: 60px 24px 80px; }
-
-  .sec-head { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
-  .sec-num { font-family: 'Playfair Display', serif; font-size: 11px; color: var(--blue); letter-spacing: 2px; white-space: nowrap; }
-  .sec-title { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-weight: 700; color: var(--ink); white-space: nowrap; }
-  .sec-line { flex: 1; height: 1px; background: var(--border); }
-  section { margin-bottom: 60px; }
-
-  .summary-card { background: var(--ink); border-radius: 16px; padding: 40px; position: relative; overflow: hidden; }
-  .summary-card::before { content: '\201C'; position: absolute; top: -20px; left: 24px; font-family: 'Playfair Display', serif; font-size: 140px; color: rgba(37,99,235,0.18); line-height: 1; }
-  .summary-card p { font-size: 16px; line-height: 1.8; color: #94afc8; position: relative; z-index: 1; }
-
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-  .skill-cat { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 22px; transition: transform 0.2s, box-shadow 0.2s; }
-  .skill-cat:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(37,99,235,0.1); }
-  .skill-cat-title { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); font-weight: 500; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-  .skill-cat-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-  .tags { display: flex; flex-wrap: wrap; gap: 7px; }
-  .tag { font-size: 12px; padding: 4px 11px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px; color: var(--ink); }
-
-  .exp-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 16px; padding: 30px; display: grid; grid-template-columns: 1fr auto; gap: 8px 20px; align-items: start; transition: box-shadow 0.2s; }
-  .exp-card:hover { box-shadow: 0 8px 28px rgba(37,99,235,0.09); }
-  .exp-role { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: var(--ink); }
-  .exp-company { color: var(--blue); font-size: 13px; font-weight: 500; margin-top: 2px; }
-  .exp-date { font-size: 12px; letter-spacing: 1px; color: var(--grey); text-align: right; white-space: nowrap; margin-top: 4px; }
-  .exp-desc { grid-column: 1 / -1; font-size: 14px; color: var(--grey); margin-top: 10px; border-top: 1px solid var(--border); padding-top: 14px; }
-
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 16px; }
-  .proj-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 26px; position: relative; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
-  .proj-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, var(--blue), var(--blue-light)); border-radius: 3px 0 0 3px; }
-  .proj-card:hover { transform: translateY(-5px); box-shadow: 0 16px 40px rgba(37,99,235,0.12); }
-  .proj-icon { font-size: 20px; margin-bottom: 12px; color: var(--blue); }
-  .proj-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; color: var(--ink); }
-  .proj-desc { font-size: 13px; color: var(--grey); line-height: 1.6; }
-  .proj-tech { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 5px; }
-  .proj-tech span { font-size: 10px; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; background: #eff6ff; border-radius: 4px; color: var(--blue); border: 1px solid #bfdbfe; }
-
-  .edu-list { display: flex; flex-direction: column; gap: 14px; }
-  .edu-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 22px 28px; display: flex; align-items: center; gap: 18px; transition: box-shadow 0.2s; }
-  .edu-item:hover { box-shadow: 0 8px 24px rgba(37,99,235,0.08); }
-  .edu-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--blue), var(--blue-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; flex-shrink: 0; }
-  .edu-degree { font-weight: 500; font-size: 15px; }
-  .edu-inst { font-size: 13px; color: var(--grey); margin-top: 2px; }
-
-  .misc-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-  .misc-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
-  .misc-card-title { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
-  .misc-card-title i { color: var(--blue); font-size: 14px; }
-  .pill-list { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill { font-size: 12px; padding: 5px 14px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 20px; color: var(--ink); }
-
-  footer { background: var(--ink); color: #3a5068; text-align: center; padding: 28px 20px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; }
-  footer span { color: var(--blue-light); }
-
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f0f4f8;--ink:#0f1c2e;--blue:#2563eb;--blue-light:#60a5fa;--grey:#64748b;--card-bg:#fff;--border:#cbd5e1}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;overflow-x:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;padding:60px 24px;background:var(--ink);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 30%,rgba(37,99,235,.22) 0%,transparent 60%),radial-gradient(ellipse 60% 80% at 80% 70%,rgba(96,165,250,.12) 0%,transparent 60%)}
+.hero-ornament{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.hero-ornament svg{position:absolute;opacity:.07}
+.hero-ornament svg:first-child{top:-60px;right:-60px;width:380px}
+.hero-ornament svg:last-child{bottom:-60px;left:-60px;width:280px;transform:rotate(180deg)}
+.hero>*:not(.hero-ornament){position:relative}
+.hero-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--blue-light);margin-bottom:20px;animation:fadeUp .8s ease both}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,8vw,6rem);color:#f0f4f8;line-height:1.08;animation:fadeUp .8s .15s ease both}
+.hero h1 em{font-style:italic;color:var(--blue-light)}
+.hero-sub{margin-top:18px;font-size:15px;color:#7f9ab5;font-weight:300;letter-spacing:.5px;animation:fadeUp .8s .3s ease both}
+.hero-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);margin:28px auto;animation:fadeUp .8s .4s ease both}
+.hero-contact-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:28px;animation:fadeUp .8s .5s ease both}
+.hero-contact-row a{display:flex;align-items:center;gap:7px;font-size:13px;color:#7f9ab5;text-decoration:none;padding:8px 16px;border:1px solid rgba(37,99,235,.35);border-radius:30px;transition:all .25s}
+.hero-contact-row a:hover{color:var(--blue-light);border-color:var(--blue-light);background:rgba(37,99,235,.1)}
+.scroll-hint{position:absolute!important;bottom:30px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px}
+.scroll-hint span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#3a5068}
+.scroll-dot{width:1px;height:40px;background:linear-gradient(to bottom,var(--blue),transparent);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+.page-wrap{max-width:940px;margin:0 auto;padding:60px 24px 80px}
+.sec-head{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.sec-num{font-family:'Playfair Display',serif;font-size:11px;color:var(--blue);letter-spacing:2px}
+.sec-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;white-space:nowrap}
+.sec-line{flex:1;height:1px;background:var(--border)}
+section{margin-bottom:60px}
+.summary-card{background:var(--ink);border-radius:16px;padding:40px;position:relative;overflow:hidden}
+.summary-card::before{content:'\201C';position:absolute;top:-20px;left:24px;font-family:'Playfair Display',serif;font-size:140px;color:rgba(37,99,235,.18);line-height:1}
+.summary-card p{font-size:16px;line-height:1.8;color:#94afc8;position:relative}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.skill-cat,.proj-card,.edu-item,.misc-card,.exp-card{background:var(--card-bg);border:1px solid var(--border);border-radius:14px;transition:transform .2s,box-shadow .2s}
+.skill-cat{padding:22px}
+.skill-cat:hover,.proj-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(37,99,235,.1)}
+.skill-cat-title{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.skill-cat-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.tags,.pill-list,.proj-tech{display:flex;flex-wrap:wrap;gap:7px}
+.tag,.pill{font-size:12px;padding:4px 11px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:20px}
+.exp-stack{display:flex;flex-direction:column;gap:16px}
+.exp-card{border-radius:16px;padding:30px;display:grid;grid-template-columns:1fr auto;gap:8px 20px;align-items:start}
+.exp-card:hover,.edu-item:hover{box-shadow:0 8px 28px rgba(37,99,235,.09)}
+.exp-role{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700}
+.exp-company{color:var(--blue);font-size:13px;font-weight:500;margin-top:2px}
+.exp-date{font-size:12px;letter-spacing:1px;color:var(--grey);text-align:right;margin-top:4px}
+.exp-desc{grid-column:1/-1;font-size:14px;color:var(--grey);margin-top:10px;border-top:1px solid var(--border);padding-top:14px}
+.exp-desc ul{padding-left:18px}
+.exp-desc li{margin-bottom:4px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.proj-card{padding:26px;position:relative;overflow:hidden}
+.proj-card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--blue),var(--blue-light))}
+.proj-icon{font-size:20px;margin-bottom:12px;color:var(--blue)}
+.proj-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;margin-bottom:8px}
+.proj-desc{font-size:13px;color:var(--grey);line-height:1.6}
+.proj-tech{margin-top:14px;gap:5px}
+.proj-tech span{font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;background:#eff6ff;border-radius:4px;color:var(--blue);border:1px solid #bfdbfe}
+.edu-list{display:flex;flex-direction:column;gap:14px}
+.edu-item{padding:22px 28px;display:flex;align-items:center;gap:18px}
+.edu-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--blue),var(--blue-light));border-radius:12px;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+.edu-degree{font-weight:500;font-size:15px}
+.edu-inst{font-size:13px;color:var(--grey);margin-top:2px}
+.misc-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.misc-card{padding:24px}
+.misc-card-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.misc-card-title i{color:var(--blue);font-size:14px}
+.pill{padding:5px 14px}
+footer{background:var(--ink);color:#3a5068;text-align:center;padding:28px 20px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+footer span{color:var(--blue-light)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:560px){.exp-card{grid-template-columns:1fr}.exp-date{text-align:left}.sec-title{white-space:normal}}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <div class="hero-ornament">
-    <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="90" stroke="#2563eb" stroke-width="1"/><circle cx="100" cy="100" r="70" stroke="#2563eb" stroke-width="0.5"/><line x1="10" y1="100" x2="190" y2="100" stroke="#2563eb" stroke-width="0.5"/><line x1="100" y1="10" x2="100" y2="190" stroke="#2563eb" stroke-width="0.5"/><polygon points="100,20 120,80 180,80 130,116 150,176 100,140 50,176 70,116 20,80 80,80" stroke="#2563eb" stroke-width="0.5" fill="none"/></svg>
-    <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="90" stroke="#2563eb" stroke-width="1"/><circle cx="100" cy="100" r="60" stroke="#2563eb" stroke-width="0.5"/><rect x="30" y="30" width="140" height="140" stroke="#2563eb" stroke-width="0.5"/></svg>
+    <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="90" stroke="#2563eb"/><circle cx="100" cy="100" r="70" stroke="#2563eb" stroke-width=".5"/><line x1="10" y1="100" x2="190" y2="100" stroke="#2563eb" stroke-width=".5"/><line x1="100" y1="10" x2="100" y2="190" stroke="#2563eb" stroke-width=".5"/></svg>
+    <svg viewBox="0 0 200 200" fill="none"><circle cx="100" cy="100" r="90" stroke="#2563eb"/><rect x="30" y="30" width="140" height="140" stroke="#2563eb" stroke-width=".5"/></svg>
   </div>
   <p class="hero-tag">Portfolio · 2026</p>
-  <h1>Fatima <em>Ejaz</em></h1>
+  <h1>Fatima <em>Ijaz</em></h1>
   <div class="hero-divider"></div>
-  <p class="hero-sub">Software Engineering Undergraduate &nbsp;·&nbsp; Aspiring Data Analyst</p>
+  <p class="hero-sub">Software Engineering Student &nbsp;·&nbsp; Graphic Designer &nbsp;·&nbsp; Software Developer &nbsp;·&nbsp; Data Analyst</p>
   <div class="hero-contact-row">
     <a href="mailto:fomoij28@gmail.com"><i class="fas fa-envelope"></i> Email</a>
     <a href="https://www.linkedin.com/in/fatima-ijaz-73b6a8369"><i class="fab fa-linkedin"></i> LinkedIn</a>
@@ -156,69 +105,104 @@
 
   <section class="reveal">
     <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">Summary</h2><div class="sec-line"></div></div>
-    <div class="summary-card"><p>Motivated Software Engineering student with hands-on experience in data analysis, Flutter, web development, and AI projects. Passionate about building user-focused applications and scalable software solutions that make a meaningful impact.</p></div>
+    <div class="summary-card"><p>Creative and motivated Software Engineering undergraduate with hands-on experience in graphic design, Unity game development, and software development. Completed a Software Engineer internship at Finz Games, building a Unity 6 mobile game. Skilled in visual content, social media creatives and branding using Canva, with experience in full-stack development (PERN stack), data analysis, Flutter, and software testing. Director of Graphics for three semesters at the COMSATS Health Awareness &amp; Blood Donor Society.</p></div>
   </section>
 
   <section class="reveal">
     <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Technical Skills</h2><div class="sec-line"></div></div>
     <div class="skills-grid">
-      <div class="skill-cat"><div class="skill-cat-title">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span><span class="tag">JavaScript</span><span class="tag">PHP</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Development</div><div class="tags"><span class="tag">Flutter</span><span class="tag">Web Dev</span><span class="tag">OOP</span><span class="tag">DSA</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Databases</div><div class="tags"><span class="tag">MySQL</span><span class="tag">Oracle</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">AI &amp; Data</div><div class="tags"><span class="tag">Data Analysis</span><span class="tag">Visualization</span><span class="tag">AI Fundamentals</span><span class="tag">NLP</span></div></div>
-      <div class="skill-cat"><div class="skill-cat-title">Tools</div><div class="tags"><span class="tag">VS Code</span><span class="tag">Figma</span><span class="tag">Canva</span><span class="tag">XAMPP</span><span class="tag">Linux</span><span class="tag">Wireshark</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">Languages</div><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span><span class="tag">C</span><span class="tag">C#</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">HTML/CSS</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">Game Development</div><div class="tags"><span class="tag">Unity 6</span><span class="tag">Input System</span><span class="tag">Game UI</span><span class="tag">Haptics</span><span class="tag">Android Builds</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">Web &amp; Mobile</div><div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Flutter</span><span class="tag">REST APIs</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">Databases</div><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">Oracle</span><span class="tag">SQL</span><span class="tag">MongoDB</span><span class="tag">Firebase</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">Testing</div><div class="tags"><span class="tag">Selenium</span><span class="tag">JUnit</span><span class="tag">TestNG</span><span class="tag">Jira</span><span class="tag">TestRail</span><span class="tag">Postman</span><span class="tag">Regression</span><span class="tag">Black-Box</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">AI &amp; Data</div><div class="tags"><span class="tag">Data Analysis</span><span class="tag">Visualization</span><span class="tag">AI Fundamentals</span><span class="tag">NLP</span><span class="tag">Info Security</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">Design &amp; Tools</div><div class="tags"><span class="tag">Canva</span><span class="tag">Figma</span><span class="tag">Git/GitHub</span><span class="tag">VS Code</span><span class="tag">IntelliJ</span><span class="tag">XAMPP</span><span class="tag">Linux</span></div></div>
+      <div class="skill-cat"><div class="skill-cat-title">SE Concepts</div><div class="tags"><span class="tag">OOP</span><span class="tag">DSA</span><span class="tag">Architecture</span><span class="tag">Design Patterns</span><span class="tag">UML</span><span class="tag">SRS</span><span class="tag">SDLC</span></div></div>
     </div>
   </section>
 
   <section class="reveal">
     <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Experience</h2><div class="sec-line"></div></div>
-    <div class="exp-card">
-      <div><div class="exp-role">Data Science Intern</div><div class="exp-company">Arch Technology</div></div>
-      <div class="exp-date">Jul – Aug 2025</div>
-      <p class="exp-desc">Worked on data cleaning, analysis, and visualization using Python and SQL. Assisted in building dashboards and reports that drove actionable insights for the team.</p>
+    <div class="exp-stack">
+      <div class="exp-card">
+        <div><div class="exp-role">Software Engineer Intern · Games Development Track</div><div class="exp-company">Finz Games Pvt Ltd, Lahore</div></div>
+        <div class="exp-date">30 Jun – 12 Aug 2026</div>
+        <div class="exp-desc"><ul>
+          <li>Developed <em>Fruit Merge</em>, a Unity 6 mobile puzzle game, covering core merge gameplay, UI, and mobile input handling.</li>
+          <li>Fixed gameplay bugs including merge race conditions, disappearing fruits, and a game-over trigger that never fired.</li>
+          <li>Built pause and game-over screens, a combo popup, a profile editor, and a power-up row.</li>
+          <li>Implemented haptic feedback with the Unity Input System and Voodoo Utils; troubleshot Android builds.</li>
+        </ul></div>
+      </div>
+      <div class="exp-card">
+        <div><div class="exp-role">Data Science Intern</div><div class="exp-company">Arch Technology</div></div>
+        <div class="exp-date">Jul – Aug 2025</div>
+        <div class="exp-desc"><ul>
+          <li>Performed data cleaning, exploratory analysis, and visualization using Python (pandas, matplotlib) and SQL on real-world business datasets.</li>
+          <li>Assisted in data modeling and BI reporting across end-to-end data science workflows.</li>
+        </ul></div>
+      </div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Projects</h2><div class="sec-line"></div></div>
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Leadership &amp; Design</h2><div class="sec-line"></div></div>
+    <div class="exp-stack">
+      <div class="exp-card">
+        <div><div class="exp-role">Director of Graphics</div><div class="exp-company">COMSATS Health Awareness &amp; Blood Donor Society</div></div>
+        <div class="exp-date">3 Semesters</div>
+        <div class="exp-desc"><ul><li>Led the graphics team and directed visual branding for campaigns, events, and social media.</li><li>Designed posters, social media creatives, and event materials in Canva.</li></ul></div>
+      </div>
+      <div class="exp-card">
+        <div><div class="exp-role">Head of Graphics · Sports Week SP-26</div><div class="exp-company">CUI Sahiwal</div></div>
+        <div class="exp-date">2026</div>
+        <div class="exp-desc">Led graphic design for Sports Week and received a Certificate of Appreciation from the Student Affairs office.</div>
+      </div>
+      <div class="exp-card">
+        <div><div class="exp-role">Graphic Design Team Member</div><div class="exp-company">COMSATS CSS Society</div></div>
+        <div class="exp-date"></div>
+        <div class="exp-desc">Contributed graphic design and creative content for society events.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Projects</h2><div class="sec-line"></div></div>
     <div class="projects-grid">
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-newspaper"></i></div><div class="proj-name">Fake News Detection</div><p class="proj-desc">AI-based system leveraging NLP to classify and detect misinformation with high accuracy.</p><div class="proj-tech"><span>Python</span><span>NLP</span><span>ML</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-tint"></i></div><div class="proj-name">Blood Donation App</div><p class="proj-desc">Flutter mobile application for seamless donor-recipient matching in real time.</p><div class="proj-tech"><span>Flutter</span><span>Firebase</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-shield-alt"></i></div><div class="proj-name">Attack Handling System</div><p class="proj-desc">Security system designed to detect and block unauthorized access attempts automatically.</p><div class="proj-tech"><span>Networking</span><span>Python</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-boxes"></i></div><div class="proj-name">Inventory Management</div><p class="proj-desc">C++ desktop system for efficient stock tracking and inventory control.</p><div class="proj-tech"><span>C++</span><span>OOP</span></div></div>
-      <div class="proj-card"><div class="proj-icon"><i class="fas fa-camera"></i></div><div class="proj-name">Tasveer Marketplace</div><p class="proj-desc">Full-stack platform connecting photographers with clients, built on the PERN stack.</p><div class="proj-tech"><span>PostgreSQL</span><span>Express</span><span>React</span><span>Node</span></div></div>
+      <div class="proj-card"><div class="proj-icon"><i class="fas fa-gamepad"></i></div><div class="proj-name">Fruit Merge</div><p class="proj-desc">Unity 6 mobile puzzle game built during my Finz Games internship, with merge gameplay, combo popups, power-ups, and haptics.</p><div class="proj-tech"><span>Unity</span><span>C#</span><span>Android</span></div></div>
+      <div class="proj-card"><div class="proj-icon"><i class="fas fa-camera"></i></div><div class="proj-name">Tasveer Marketplace</div><p class="proj-desc">Full-stack photography marketplace with normalized DB schemas and a responsive React UI. Tested manually, with defects tracked in Jira and APIs validated in Postman.</p><div class="proj-tech"><span>PostgreSQL</span><span>Express</span><span>React</span><span>Node</span></div></div>
+      <div class="proj-card"><div class="proj-icon"><i class="fas fa-newspaper"></i></div><div class="proj-name">Fake News Detection</div><p class="proj-desc">NLP-based fake news verification web app, with regression test cases to evaluate model accuracy across varied datasets.</p><div class="proj-tech"><span>Python</span><span>NLP</span><span>ML</span></div></div>
+      <div class="proj-card"><div class="proj-icon"><i class="fas fa-tint"></i></div><div class="proj-name">Blood Donation &amp; Glow Up</div><p class="proj-desc">Two Flutter apps: a real-time donor-recipient connectivity app and a lifestyle app, with Firebase integration and structured navigation.</p><div class="proj-tech"><span>Flutter</span><span>Firebase</span></div></div>
+      <div class="proj-card"><div class="proj-icon"><i class="fas fa-shield-alt"></i></div><div class="proj-name">Attack Handling System</div><p class="proj-desc">Intrusion detection with automated device blocking; documented threat scenarios and black-box tested the detection logic.</p><div class="proj-tech"><span>Security</span><span>Testing</span></div></div>
+      <div class="proj-card"><div class="proj-icon"><i class="fas fa-boxes"></i></div><div class="proj-name">Banking, Blood Bank &amp; Inventory Systems</div><p class="proj-desc">Coursework systems: led SRS and design as Team Lead (Blood Bank), Java systems unit-tested with JUnit, and a C++ inventory app.</p><div class="proj-tech"><span>Java</span><span>C++</span><span>JUnit</span></div></div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Education</h2><div class="sec-line"></div></div>
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Education</h2><div class="sec-line"></div></div>
     <div class="edu-list">
-      <div class="edu-item"><div class="edu-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="edu-degree">BS Software Engineering</div><div class="edu-inst">COMSATS Sahiwal &nbsp;·&nbsp; 2023 – Present</div></div></div>
-      <div class="edu-item"><div class="edu-icon"><i class="fas fa-school"></i></div><div><div class="edu-degree">FSc Pre-Engineering</div><div class="edu-inst">Punjab College Okara</div></div></div>
+      <div class="edu-item"><div class="edu-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="edu-degree">Bachelor of Software Engineering</div><div class="edu-inst">COMSATS University Islamabad, Sahiwal Campus &nbsp;·&nbsp; 2023 – Present</div></div></div>
+      <div class="edu-item"><div class="edu-icon"><i class="fas fa-school"></i></div><div><div class="edu-degree">FSc Pre-Engineering</div><div class="edu-inst">Punjab Group of Colleges, Okara &nbsp;·&nbsp; 2021 – 2023</div></div></div>
     </div>
   </section>
 
   <section class="reveal">
-    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">More About Me</h2><div class="sec-line"></div></div>
+    <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">More About Me</h2><div class="sec-line"></div></div>
     <div class="misc-row">
-      <div class="misc-card"><div class="misc-card-title"><i class="fas fa-star"></i> Soft Skills</div><div class="pill-list"><span class="pill">Problem Solving</span><span class="pill">Communication</span><span class="pill">Leadership</span><span class="pill">Teamwork</span></div></div>
-      <div class="misc-card"><div class="misc-card-title"><i class="fas fa-language"></i> Languages</div><div class="pill-list"><span class="pill">Urdu</span><span class="pill">English</span><span class="pill">Punjabi</span><span class="pill">Hindi</span></div></div>
+      <div class="misc-card"><div class="misc-card-title"><i class="fas fa-star"></i> Soft Skills</div><div class="pill-list"><span class="pill">Problem Solving</span><span class="pill">Debugging</span><span class="pill">Teamwork</span><span class="pill">Communication</span><span class="pill">Leadership</span></div></div>
+      <div class="misc-card"><div class="misc-card-title"><i class="fas fa-language"></i> Languages</div><div class="pill-list"><span class="pill">Urdu (Native)</span><span class="pill">English (Proficient)</span><span class="pill">Punjabi (Fluent)</span><span class="pill">Hindi (Conversational)</span></div></div>
       <div class="misc-card"><div class="misc-card-title"><i class="fas fa-heart"></i> Interests</div><div class="pill-list"><span class="pill">Calligraphy</span><span class="pill">Photography</span><span class="pill">Reading</span><span class="pill">Volunteering</span></div></div>
     </div>
   </section>
 
 </main>
 
-<footer><p>Crafted with care by <span>Fatima Ejaz</span> &nbsp;·&nbsp; © 2026</p></footer>
+<footer><p>Crafted with care by <span>Fatima Ijaz</span> &nbsp;·&nbsp; © 2026</p></footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(r => io.observe(r));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
 </script>
 </body>
 </html>
